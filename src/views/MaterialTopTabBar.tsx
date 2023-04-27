@@ -20,7 +20,7 @@ export function MaterialTopTabBar({
   const { colors, fonts } = useTheme();
 
   const focusedOptions = descriptors[state.routes[state.index].key].options;
-  console.log("testing");
+
   const activeColor = focusedOptions.tabBarActiveTintColor ?? colors.text;
   const inactiveColor =
     focusedOptions.tabBarInactiveTintColor ??
