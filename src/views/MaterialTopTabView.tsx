@@ -4,17 +4,17 @@ import {
   Route,
   TabNavigationState,
   useTheme,
-} from '@react-navigation/native';
-import * as React from 'react';
-import { SceneRendererProps, TabView } from 'react-native-tab-view';
+} from "@react-navigation/native";
+import * as React from "react";
+import { SceneRendererProps, TabView } from "react-native-tab-view";
 
 import type {
   MaterialTopTabBarProps,
   MaterialTopTabDescriptorMap,
   MaterialTopTabNavigationConfig,
   MaterialTopTabNavigationHelpers,
-} from '../types';
-import { MaterialTopTabBar } from './MaterialTopTabBar';
+} from "../types";
+import { MaterialTopTabBar } from "./MaterialTopTabBar";
 
 type Props = MaterialTopTabNavigationConfig & {
   state: TabNavigationState<ParamListBase>;
@@ -64,8 +64,8 @@ export function MaterialTopTabView({
       lazyPreloadDistance={focusedOptions.lazyPreloadDistance}
       swipeEnabled={focusedOptions.swipeEnabled}
       animationEnabled={focusedOptions.animationEnabled}
-      onSwipeStart={() => navigation.emit({ type: 'swipeStart' })}
-      onSwipeEnd={() => navigation.emit({ type: 'swipeEnd' })}
+      onSwipeStart={() => navigation.emit({ type: "swipeStart" })}
+      onSwipeEnd={() => navigation.emit({ type: "swipeEnd" })}
       sceneContainerStyle={[
         { backgroundColor: colors.background },
         sceneContainerStyle,

@@ -30,6 +30,7 @@ export function MaterialTopTabBar({
     <TabBar
       {...rest}
       navigationState={state}
+      handleCloseTab={focusedOptions.handleCloseTab}
       scrollEnabled={focusedOptions.tabBarScrollEnabled}
       bounces={focusedOptions.tabBarBounces}
       activeColor={activeColor}
