@@ -3,13 +3,13 @@ import {
   Route,
   TabNavigationState,
   useTheme,
-} from '@react-navigation/native';
-import Color from 'color';
-import * as React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { TabBar, TabBarIndicator } from 'react-native-tab-view';
+} from "@react-navigation/native";
+import Color from "color";
+import * as React from "react";
+import { StyleSheet, Text, View } from "react-native";
+import { TabBar, TabBarIndicator } from "react-native-tab-view";
 
-import type { MaterialTopTabBarProps } from '../types';
+import type { MaterialTopTabBarProps } from "../types";
 
 export function MaterialTopTabBar({
   state,
@@ -20,7 +20,7 @@ export function MaterialTopTabBar({
   const { colors, fonts } = useTheme();
 
   const focusedOptions = descriptors[state.routes[state.index].key].options;
-
+  console.log("testing");
   const activeColor = focusedOptions.tabBarActiveTintColor ?? colors.text;
   const inactiveColor =
     focusedOptions.tabBarInactiveTintColor ??
@@ -54,7 +54,7 @@ export function MaterialTopTabBar({
       }
       onTabPress={({ route, preventDefault }) => {
         const event = navigation.emit({
-          type: 'tabPress',
+          type: "tabPress",
           target: route.key,
           canPreventDefault: true,
         });
@@ -65,7 +65,7 @@ export function MaterialTopTabBar({
       }}
       onTabLongPress={({ route }) =>
         navigation.emit({
-          type: 'tabLongPress',
+          type: "tabLongPress",
           target: route.key,
         })
       }
@@ -100,7 +100,7 @@ export function MaterialTopTabBar({
             ? options.title
             : (route as Route<string>).name;
 
-        if (typeof label === 'string') {
+        if (typeof label === "string") {
           return (
             <Text
               style={[
@@ -117,7 +117,7 @@ export function MaterialTopTabBar({
         }
 
         const children =
-          typeof options.tabBarLabel === 'string'
+          typeof options.tabBarLabel === "string"
             ? options.tabBarLabel
             : options.title !== undefined
             ? options.title
@@ -150,10 +150,10 @@ const styles = StyleSheet.create({
     width: 24,
   },
   label: {
-    textAlign: 'center',
-    textTransform: 'uppercase',
+    textAlign: "center",
+    textTransform: "uppercase",
     fontSize: 13,
     margin: 4,
-    backgroundColor: 'transparent',
+    backgroundColor: "transparent",
   },
 });
