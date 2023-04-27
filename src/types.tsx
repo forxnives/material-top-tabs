@@ -7,19 +7,19 @@ import type {
   RouteProp,
   TabActionHelpers,
   TabNavigationState,
-} from '@react-navigation/native';
-import type React from 'react';
+} from "@react-navigation/native";
+import type React from "react";
 import type {
   PressableAndroidRippleConfig,
   StyleProp,
   TextStyle,
   ViewStyle,
-} from 'react-native';
+} from "react-native";
 import type {
   SceneRendererProps,
   TabBar,
   TabViewProps,
-} from 'react-native-tab-view';
+} from "react-native-tab-view";
 
 export type MaterialTopTabNavigationEventMap = {
   /**
@@ -126,9 +126,9 @@ export type MaterialTopTabNavigationOptions = {
   tabBarIndicator?: (
     props: Omit<
       Parameters<
-        NonNullable<React.ComponentProps<typeof TabBar>['renderIndicator']>
+        NonNullable<React.ComponentProps<typeof TabBar>["renderIndicator"]>
       >[0],
-      'navigationState'
+      "navigationState"
     > & { state: TabNavigationState<ParamListBase> }
   ) => React.ReactNode;
 
@@ -257,6 +257,8 @@ export type MaterialTopTabNavigationOptions = {
    * By default, this renders `null`.
    */
   lazyPlaceholder?: () => React.ReactNode;
+
+  handleClose?: () => void;
 };
 
 export type MaterialTopTabDescriptor = Descriptor<
@@ -272,18 +274,18 @@ export type MaterialTopTabDescriptorMap = Record<
 
 export type MaterialTopTabNavigationConfig = Omit<
   TabViewProps<Route<string>>,
-  | 'navigationState'
-  | 'onIndexChange'
-  | 'onSwipeStart'
-  | 'onSwipeEnd'
-  | 'renderScene'
-  | 'renderTabBar'
-  | 'renderLazyPlaceholder'
-  | 'swipeEnabled'
-  | 'animationEnabled'
-  | 'lazy'
-  | 'lazyPreloadDistance'
-  | 'lazyPlaceholder'
+  | "navigationState"
+  | "onIndexChange"
+  | "onSwipeStart"
+  | "onSwipeEnd"
+  | "renderScene"
+  | "renderTabBar"
+  | "renderLazyPlaceholder"
+  | "swipeEnabled"
+  | "animationEnabled"
+  | "lazy"
+  | "lazyPreloadDistance"
+  | "lazyPlaceholder"
 > & {
   /**
    * Function that returns a React element to display as the tab bar.
