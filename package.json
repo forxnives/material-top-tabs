@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "color": "^4.2.3",
-    "react-native-tab-view": "forxnives/react-native-tab-view#other"
+    "react-native-tab-view": "forxnives/react-native-tab-view#new_branch"
   },
   "devDependencies": {
     "@react-navigation/native": "workspace:^",
