@@ -106,7 +106,7 @@ export function MaterialTopTabBar({
             <Text
               style={[
                 { color },
-                fonts.regular,
+                // fonts.regular,
                 styles.label,
                 options.tabBarLabelStyle,
               ]}
